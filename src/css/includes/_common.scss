@@ -2,44 +2,6 @@
     $COMMON STYLES
 \*------------------------------------*/
 
-// Mixins
-
-@mixin inline-block() {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-}
-
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@mixin block-shadow {
-  position: relative;
-  box-shadow: 0 3px 10px rgba(17, 18, 22, 0.26);
-}
-
-@mixin minw($px) {
-  @media screen and (min-width: $px+px) {
-    @content;
-  }
-}
-
-@mixin maxw($px) {
-  @media screen and (max-width: $px+px) {
-    @content;
-  }
-}
-
-@mixin minmax($pxmin, $pxmax) {
-  @media screen and (min-width: $pxmin+px) and (max-width: $pxmax+px) {
-    @content;
-  }
-}
-
-
 .clearfix,
 %clearfix{
   //IE fix
@@ -66,7 +28,7 @@
 
 .b-content {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 0 15px;
   @include minw(1200) {
@@ -75,66 +37,43 @@
 }
 
 
-
-.b-button,
-%b-button {
-  position: relative;
-  display: inline-block;
-  //width: 100%;
-  padding: 5px 10px;
-  //font: 0.938em "open_sansbold"; // 15 / 16
-  color: #ffffff;
-  text-decoration: none;
-  text-align: center;
-  outline: none;
-  transition: all 0.3s ease-out;
-}
-
-/*.b-btn--blue {
-  background-color: #222d4e;
-  &:hover {
-    background-color: #507cbe;
-  }
-}
-
-.b-btn--red {
-  background-color: #cd3c3c;
-  &:hover {
-    background-color: #f1691c;
-  }
-}*/
-
 .t-uc {
   text-transform: uppercase;
+}
+.t-b {
+  font-weight: bold;
 }
 
 .t-sup {
   vertical-align: super;
 }
 
-/*.b-block__header {
+
+///////// COLORS
+
+$green : #4ecb8c;
+
+
+.b-block__header {
   margin: 0 auto;
 }
 
-.b-block-header__text {
-  font: 2.500em "SourceSansPro ExtraLight"; // 40 / 16
-  letter-spacing: 1.15px;
-  color: #ca393a;
+.b-block__header-text {
+  font: 34px "Cabin-Regular";
+  color: #000000;
   text-align: center;
-  text-transform: uppercase;
-}*/
+}
+.b-block__header-text--white {
+  @extend .b-block__header-text;
+  color: #ffffff;
+}
+.b-block__header-text--black {
+  @extend .b-block__header-text;
+  color: #000000;
+}
 
-
-
-//Waypoints
-
-.wp1, .wp2, .wp3, .wp4, .wp5 { visibility: hidden; }
-.bounceInLeft, .bounceInRight, .fadeIn, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .zoomIn { visibility: visible; }
-.delay-02s {animation-delay: 0.2s; -webkit-animation-delay: 0.2s; }
-.delay-04s {animation-delay: 0.4s; -webkit-animation-delay: 0.4s; }
-.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
-.delay-06s {animation-delay: 0.6s; -webkit-animation-delay: 0.6s; }
-.delay-08s {animation-delay: 0.8s; -webkit-animation-delay: 0.8s; }
-.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
-.delay-12s { animation-delay: 1.2s; -webkit-animation-delay: 1.2s; }
-.delay-2s { animation-delay: 2s; -webkit-animation-delay: 2s; }
+@include minw(768) {
+  .b-block__header-text {
+    font: 48px "Cabin-Regular";
+  }
+}

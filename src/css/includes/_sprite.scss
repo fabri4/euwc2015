@@ -3,3 +3,33 @@
 \*------------------------------------*/
 
 $sprite : url('../img/sprite/spritesheet.png');
+
+.sprite-ico-brush {
+  width: 26px;
+  height: 26px;
+  background-position: -20px -20px;
+}
+
+.sprite-ico-calendar {
+  width: 14px;
+  height: 14px;
+  background-position: -20px -86px;
+}
+
+.sprite-ico-comments {
+  width: 18px;
+  height: 16px;
+  background-position: -20px -140px;
+}
+
+.sprite-ico-flag {
+  width: 26px;
+  height: 25px;
+  background-position: -20px -196px;
+}
+
+.sprite-ico-user {
+  width: 23px;
+  height: 22px;
+  background-position: -20px -261px;
+}
