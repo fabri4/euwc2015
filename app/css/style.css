@@ -198,6 +198,7 @@ html {
 /*------------------------------------*    $COMMON STYLES
 \*------------------------------------*/
 .clearfix,
+.b-header__content,
 .b-story__wrapper,
 .b-clients__layout,
 .b-clients__item-credits,
@@ -207,6 +208,7 @@ html {
   *zoom: 1; }
 
 .clearfix:after,
+.b-header__content:after,
 .b-story__wrapper:after,
 .b-clients__layout:after,
 .b-clients__item-credits:after,
@@ -395,7 +397,7 @@ html {
     text-align: left;
     padding: 0 0 15px; }
   .b-nav__list {
-    letter-spacing: -.3em;
+    font-size: 0;
     text-align: right; }
   .b-nav__item {
     display: inline-block;
