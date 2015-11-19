@@ -289,8 +289,9 @@ html {
   border: 2px solid #4ecb8c;
   background-color: #4ecb8c; }
   .b-btn--green:hover, .b-btn--main:hover {
-    border: 2px solid #fff;
-    background-color: #28c665; }
+    border: 2px solid #333333;
+    background-color: #fff;
+    color: #333333; }
 
 .b-btn--black, .b-btn--story {
   color: #333333;
