@@ -77,9 +77,9 @@
 
 	<section class="b-features__wrapper">
 		<div class="b-features b-content">
-			<div class="b-block__header">
+			<header class="b-block__header">
 				<h1 class="b-block__header-text--black">Features you’ll love</h1>
-			</div>
+			</header>
 			<div class="b-features__layout">
 				<div class="b-features__item">
 					<div class="b-features__item-ico"></div>
@@ -109,9 +109,9 @@
 	<section class="b-story__wrapper" id="about">
 		<div class="b-story b-content">
 			<div class="b-story__content">
-				<div class="b-block__header b-story__header">
+				<header class="b-block__header b-story__header">
 					<h1 class="b-block__header-text--black">Our Short Story</h1>
-				</div>
+				</header>
 				<div class="b-story__info">
 					<p class="b-story__text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem.
@@ -128,18 +128,20 @@
 	</section>
 	<section class="b-clients__wrapper">
 		<div class="b-clients b-content">
-			<div class="b-block__header">
+			<header class="b-block__header">
 				<h1 class="b-block__header-text--black">Our Clients Says</h1>
-			</div>
+			</header>
 
 			<div class="b-clients__layout">
 				<div class="b-clients__left">
-					<div class="b-clients__item">
+					<article class="b-clients__item">
 						<p class="b-clients__item-text">
 							Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
 						</p>
 						<div class="b-clients__item-credits">
-							<div class="b-clients__item-photo"></div>
+							<div class="b-clients__item-photo-wrap">
+								<img class="b-clients__item-photo" src="img/clients/1.jpg" alt="">
+							</div>
 							<div class="b-clients__item-info">
 								<h3 class="b-clients__item-name">
 									Joe Doe
@@ -149,14 +151,16 @@
 								</h3>
 							</div>
 						</div>
-					</div>
+					</article>
 
-					<div class="b-clients__item">
+					<article class="b-clients__item">
 						<p class="b-clients__item-text">
 							Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
 						</p>
 						<div class="b-clients__item-credits">
-							<div class="b-clients__item-photo"></div>
+							<div class="b-clients__item-photo-wrap">
+								<img class="b-clients__item-photo" src="img/clients/2.jpg" alt="">
+							</div>
 							<div class="b-clients__item-info">
 								<h3 class="b-clients__item-name">
 									Joe Doe
@@ -166,15 +170,17 @@
 								</h3>
 							</div>
 						</div>
-					</div>
+					</article>
 				</div>
 				<div class="b-clients__right">
-					<div class="b-clients__item">
+					<article class="b-clients__item">
 						<p class="b-clients__item-text">
 							Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
 						</p>
 						<div class="b-clients__item-credits">
-							<div class="b-clients__item-photo"></div>
+							<div class="b-clients__item-photo-wrap">
+								<img class="b-clients__item-photo" src="img/clients/5.jpg" alt="">
+							</div>
 							<div class="b-clients__item-info">
 								<h3 class="b-clients__item-name">
 									Joe Doe
@@ -184,14 +190,16 @@
 								</h3>
 							</div>
 						</div>
-					</div>
+					</article>
 
-					<div class="b-clients__item">
+					<article class="b-clients__item">
 						<p class="b-clients__item-text">
 							Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
 						</p>
 						<div class="b-clients__item-credits">
-							<div class="b-clients__item-photo"></div>
+							<div class="b-clients__item-photo-wrap">
+								<img class="b-clients__item-photo" src="img/clients/4.jpg" alt="">
+							</div>
 							<div class="b-clients__item-info">
 								<h3 class="b-clients__item-name">
 									Joe Doe
@@ -201,7 +209,7 @@
 								</h3>
 							</div>
 						</div>
-					</div>
+					</article>
 				</div>
 
 			</div>
@@ -209,10 +217,10 @@
 	</section>
 	<section class="b-experience__wrapper" id="portfolio">
 		<div class="b-experience b-content">
-			<div class="b-experience__info">
-				<div class="b-block__header">
+			<section class="b-experience__info">
+				<header class="b-block__header">
 					<h1 class="b-block__header-text--white">Our Experience</h1>
-				</div>
+				</header>
 				<p class="b-experience__text">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem.
 				</p>
@@ -222,64 +230,76 @@
 				<div class="b-experience__button">
 					<a class="b-btn--experience" href="javascript:void(0)">View case studies</a>
 				</div>
-			</div>
-			<div class="b-experience__skills">
-				<div class="b-block__header">
+			</section>
+			<section class="b-experience__skills">
+				<header class="b-block__header">
 					<h1 class="b-block__header-text--white">Skills</h1>
-				</div>
+				</header>
 				<div class="b-skills__layout">
 					<div class="b-skills__item">
 						<h3 class="b-skills__item-name">
 							C++ development
 						</h3>
-						<div class="b-skills__item-progressbar">
-							<span class="b-skills__item-progress">95%</span>
+						<div class="b-progressbar-wrap">
+							<span class="b-progressbar" data-width="63">
+								<strong class="b-progressbar-value"><i>%</i></strong>
+							</span>
 						</div>
 					</div>
 					<div class="b-skills__item">
 						<h3 class="b-skills__item-name">
 							.Net
 						</h3>
-						<div class="b-skills__item-progressbar">
-							<span class="b-skills__item-progress">75%</span>
+						<div class="b-progressbar-wrap">
+							<span class="b-progressbar" data-width="35">
+								<strong class="b-progressbar-value"><i>%</i></strong>
+							</span>
 						</div>
 					</div>
 					<div class="b-skills__item">
 						<h3 class="b-skills__item-name">
 							HTML5
 						</h3>
-						<div class="b-skills__item-progressbar">
-							<span class="b-skills__item-progress">80%</span>
+						<div class="b-progressbar-wrap">
+							<span class="b-progressbar" data-width="50">
+								<strong class="b-progressbar-value"><i>%</i></strong>
+							</span>
 						</div>
 					</div>
 					<div class="b-skills__item">
 						<h3 class="b-skills__item-name">
 							jQuery
 						</h3>
-						<div class="b-skills__item-progressbar">
-							<span class="b-skills__item-progress">55%</span>
+						<div class="b-progressbar-wrap">
+							<span class="b-progressbar" data-width="20">
+								<strong class="b-progressbar-value"><i>%</i></strong>
+							</span>
 						</div>
 					</div>
 					<div class="b-skills__item">
 						<h3 class="b-skills__item-name">
 							Angular
 						</h3>
-						<div class="b-skills__item-progressbar">
-							<span class="b-skills__item-progress">85%</span>
+						<div class="b-progressbar-wrap">
+							<span class="b-progressbar" data-width="90">
+								<strong class="b-progressbar-value"><i>%</i></strong>
+							</span>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
 	</section>
 	<section class="b-blog__wrapper" id="blog">
 		<div class="b-blog b-content">
-			<div class="b-block__header">
+			<header class="b-block__header">
 				<h1 class="b-block__header-text--black">From the Blog</h1>
-			</div>
+			</header>
 			<div class="b-blog__layout">
-				<div class="b-blog__item">
-					<div class="b-blog__item-image"></div>
+				<article class="b-blog__item">
+					<div class="b-blog__item-image-wrap">
+						<img class="b-blog__item-image" src="img/blog/1.jpg" alt="">
+					</div>
 					<div class="b-blog__item-content">
 						<h3 class="b-blog__item-header">
 							Cache Invalidation Strategies
@@ -299,10 +319,12 @@
 							hat users were clear about the value
 						</p>
 					</div>
-				</div>
+				</article>
 
-				<div class="b-blog__item">
-					<div class="b-blog__item-image"></div>
+				<article class="b-blog__item">
+					<div class="b-blog__item-image-wrap">
+						<img class="b-blog__item-image" src="img/blog/2.jpg" alt="">
+					</div>
 					<div class="b-blog__item-content">
 						<h3 class="b-blog__item-header">
 							Cache Invalidation Strategies
@@ -322,10 +344,12 @@
 							hat users were clear about the value
 						</p>
 					</div>
-				</div>
+				</article>
 
-				<div class="b-blog__item">
-					<div class="b-blog__item-image"></div>
+				<article class="b-blog__item">
+					<div class="b-blog__item-image-wrap">
+						<img class="b-blog__item-image" src="img/blog/3.jpg" alt="">
+					</div>
 					<div class="b-blog__item-content">
 						<h3 class="b-blog__item-header">
 							Cache Invalidation Strategies
@@ -345,7 +369,7 @@
 							hat users were clear about the value
 						</p>
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	</section>
@@ -372,7 +396,7 @@
 				</h1>
 			</a>
 			<div class="b-footer__contacts">
-				<div class="b-contacts__item">
+				<address class="b-contacts__item">
 					<h2 class="b-contacts__item-header">
 						New York
 					</h2>
@@ -382,8 +406,8 @@
 					</p>
 					<a class="b-contacts__item-phone" href="tel:+4480080090">+44 800 800 90</a>
 					<a class="b-contacts__item-mail" href="mailto:info@domen.com ">info@domen.com </a>
-				</div>
-				<div class="b-contacts__item">
+				</address>
+				<address class="b-contacts__item">
 					<h2 class="b-contacts__item-header">
 						London
 					</h2>
@@ -393,8 +417,8 @@
 					</p>
 					<a class="b-contacts__item-phone" href="tel:+4480080090">+44 800 800 90</a>
 					<a class="b-contacts__item-mail" href="mailto:info@domen.com ">info@domen.com </a>
-				</div>
-				<div class="b-contacts__item">
+				</address>
+				<address class="b-contacts__item">
 					<h2 class="b-contacts__item-header">
 						Madrid
 					</h2>
@@ -404,7 +428,7 @@
 					</p>
 					<a class="b-contacts__item-phone" href="tel:+4480080090">+44 800 800 90</a>
 					<a class="b-contacts__item-mail" href="mailto:info@domen.com ">info@domen.com </a>
-				</div>
+				</address>
 			</div>
 		</div>
 	</footer>

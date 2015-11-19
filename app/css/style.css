@@ -417,7 +417,8 @@ html {
 
 /*----------- #MAIN ---------*/
 .b-main__wrapper {
-  background-color: #9b9a95;
+  background: url("../img/bg/main.jpg") no-repeat;
+  background-size: cover;
   padding-bottom: 70px; }
 
 .b-main {
@@ -594,12 +595,14 @@ html {
       border-width: 8px 10px 0; }
   .b-clients__item-credits {
     margin: 13px 5px 0 0; }
-  .b-clients__item-photo {
+  .b-clients__item-photo-wrap {
     float: right;
     width: 59px;
-    height: 59px;
-    border-radius: 50%;
-    background-color: #989898; }
+    height: 59px; }
+  .b-clients__item-photo {
+    display: block;
+    width: 100%;
+    border-radius: 50%; }
   .b-clients__item-info {
     margin: 0 79px 0 0;
     padding-top: 8px;
@@ -667,60 +670,50 @@ html {
   .b-skills__item-name {
     font: 16px "Lato-Regular";
     color: #ffffff; }
-  .b-skills__item-progressbar {
-    position: relative;
-    margin-top: 8px;
-    width: 97.33333333333334%;
-    height: 15px;
-    background-color: #fff; }
-    .b-skills__item-progressbar:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background-color: #36c36e; }
-  .b-skills__item-progress {
+
+.b-progressbar-wrap {
+  position: relative;
+  margin-top: 8px;
+  width: 97.33333333333334%;
+  height: 15px;
+  background-color: #fff; }
+  .b-progressbar-wrap:hover .b-progressbar-value {
+    opacity: 1; }
+
+.b-progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #36c36e;
+  -webkit-transition: width 0.5s ease-out;
+          transition: width 0.5s ease-out; }
+
+.b-progressbar-value {
+  position: absolute;
+  top: -38px;
+  right: 0;
+  display: inline-block;
+  padding: 6px 6px 6px 9px;
+  font: 12px "Raleway-Bold";
+  color: #fff;
+  text-align: center;
+  background-color: #202020;
+  border-radius: 5px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out; }
+  .b-progressbar-value:after {
+    content: "";
     position: absolute;
-    top: -38px;
-    display: inline-block;
-    padding: 6px 5px 6px 12px;
-    font: 12px "Raleway-Bold";
-    color: #fff;
-    text-align: center;
-    background-color: #202020;
-    border-radius: 5px; }
-    .b-skills__item-progress:after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      left: 46%;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 6.1px 3.5px 0 3.5px;
-      border-color: #202020 transparent transparent transparent; }
-  .b-skills__item:nth-child(1) .b-skills__item-progressbar:after {
-    width: 95%; }
-  .b-skills__item:nth-child(1) .b-skills__item-progressbar .b-skills__item-progress {
-    left: 91%; }
-  .b-skills__item:nth-child(2) .b-skills__item-progressbar:after {
-    width: 75%; }
-  .b-skills__item:nth-child(2) .b-skills__item-progressbar .b-skills__item-progress {
-    left: 71%; }
-  .b-skills__item:nth-child(3) .b-skills__item-progressbar:after {
-    width: 80%; }
-  .b-skills__item:nth-child(3) .b-skills__item-progressbar .b-skills__item-progress {
-    left: 76%; }
-  .b-skills__item:nth-child(4) .b-skills__item-progressbar:after {
-    width: 55%; }
-  .b-skills__item:nth-child(4) .b-skills__item-progressbar .b-skills__item-progress {
-    left: 51%; }
-  .b-skills__item:nth-child(5) .b-skills__item-progressbar:after {
-    width: 85%; }
-  .b-skills__item:nth-child(5) .b-skills__item-progressbar .b-skills__item-progress {
-    left: 81%; }
+    bottom: -6px;
+    left: 46%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.1px 3.5px 0 3.5px;
+    border-color: #202020 transparent transparent transparent; }
 
 @media screen and (min-width: 768px) {
   .b-experience__wrapper {
@@ -764,10 +757,20 @@ html {
 .b-blog__item {
   width: 100%;
   margin-bottom: 50px; }
-  .b-blog__item-image {
+  .b-blog__item-image-wrap {
+    position: relative;
     width: 100%;
     height: 204px;
-    background-color: #989898; }
+    overflow: hidden; }
+  .b-blog__item-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: block;
+    width: 100%; }
   .b-blog__item-content {
     text-align: left;
     margin-top: 20px;
@@ -872,34 +875,47 @@ html {
 
 .b-footer__logo {
   margin-top: 37px;
+  text-align: center;
   text-decoration: none; }
 
 .b-footer__logo-text {
   font: 30px "PoiretOne-Regular";
   color: #fff; }
 
-.b-contacts__item-header {
-  font: 16px "Lato-Bold";
-  color: #ffffff;
-  text-transform: uppercase; }
+.b-footer__contacts {
+  margin-top: 40px;
+  text-align: center; }
 
-.b-contacts__item-text {
-  margin-top: 12px;
-  font: 14px/19px "Lato-Regular";
-  color: #fff; }
+.b-contacts__item {
+  margin-bottom: 30px; }
+  .b-contacts__item:last-child {
+    margin-bottom: 0; }
+  .b-contacts__item-header {
+    font: 16px "Lato-Bold";
+    color: #ffffff;
+    text-transform: uppercase; }
+  .b-contacts__item-text {
+    margin-top: 12px;
+    font: 14px/19px "Lato-Regular";
+    color: #fff; }
+  .b-contacts__item-phone {
+    display: block;
+    margin-top: 22px;
+    font: 14px "Lato-Regular";
+    color: #fff;
+    text-decoration: none; }
+  .b-contacts__item-mail {
+    display: block;
+    font: 14px "Lato-Regular";
+    color: #fff;
+    text-decoration: none; }
 
-.b-contacts__item-phone {
-  display: block;
-  margin-top: 22px;
-  font: 14px "Lato-Regular";
-  color: #fff;
-  text-decoration: none; }
-
-.b-contacts__item-mail {
-  display: block;
-  font: 14px "Lato-Regular";
-  color: #fff;
-  text-decoration: none; }
+@media screen and (min-width: 520px) {
+  .b-contacts__item {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: normal;
+    width: 40%; } }
 
 @media screen and (min-width: 768px) {
   .b-footer__logo, .b-footer__contacts {
@@ -909,9 +925,15 @@ html {
   .b-footer__contacts {
     width: 70%;
     /* 800 / 1050 */
-    margin-left: 75px; }
+    margin: 0 0 0 3%;
+    text-align: left; }
   .b-contacts__item {
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
+    margin-bottom: 0;
     width: 32%; } }
+
+@media screen and (min-width: 992px) {
+  .b-footer__contacts {
+    margin-left: 75px; } }
