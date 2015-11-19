@@ -821,6 +821,7 @@
     }
     &-mail {
       display: block;
+      margin-top: 5px;
       font: 14px "Lato-Regular";
       color: #fff;
       text-decoration: none;
@@ -832,7 +833,6 @@
   .b-contacts {
     &__item {
       @include inline-block;
-      //margin-bottom: 20;
       width: 40%;
     }
   }
