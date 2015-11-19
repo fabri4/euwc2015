@@ -907,6 +907,7 @@ html {
     text-decoration: none; }
   .b-contacts__item-mail {
     display: block;
+    margin-top: 5px;
     font: 14px "Lato-Regular";
     color: #fff;
     text-decoration: none; }
