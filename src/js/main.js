@@ -35,4 +35,19 @@ $(document).ready(function() {
             }
         }
     });
+
+    //////////     PROGRESSBAR       ////////////
+
+    $(".b-progressbar").each(function(){
+        var $this = $(this);
+        var widthValue = $this.data("width");
+        $this.css("width", widthValue + "%");
+        $this.find("i").html(widthValue + "%");
+        if (widthValue < 7) {
+            $this.find("strong").css({
+                "left": "0",
+                "right": "auto"
+            });
+        }
+    });
 });
